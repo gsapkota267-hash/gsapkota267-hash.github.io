@@ -2,26 +2,54 @@
 
 <header><a class="logo" href="#home">GAURAV <span>SAPKOTA</span></a><button class="menu" aria-label="Menu">☰</button><nav><a href="#home">Home</a><a href="#work">Work</a><a href="#services">Services</a><a href="#about">About</a><a href="#contact">Contact</a></nav><a class="head-btn" href="#contact">Start a Project</a></header>
 
-<main><section id="home" class="hero"><div class="hero-bg"></div><div class="hero-content"><span class="tag">INDEPENDENT WEB DEVELOPER · NEPAL</span><div class="hero-photo"><img src="IMG_20260812_214508.jpeg" alt="Gaurav Sapkota"></div><h1><span id="typing-normal"></span><br><em id="typing-em"></em><span class="cursor">|</span></h1><p>I design and develop clean, responsive and professional websites for individuals, professionals and businesses.</p><div class="buttons"><a class="btn" href="#work">View My Work ↗</a><a class="btn light" href="#contact">Let's Talk</a></div></div><div class="hero-bottom"><span>Based in Nepal</span><span>Web Development · Deployment · Hosting</span></div></section>
+<main><section id="home" class="hero"><div class="hero-bg"></div><div class="hero-content">
+
+<div class="intro-name" id="intro-name">GAURAV SAPKOTA</div>
+
+<span class="tag" id="intro-tag">INDEPENDENT WEB DEVELOPER · NEPAL</span>
+
+<div class="hero-photo" id="intro-photo"><img src="IMG_20260812_214508.jpeg" alt="Gaurav Sapkota"></div>
+
+<h1><span id="typing-normal"></span><br><em id="typing-em"></em><span class="cursor">|</span></h1>
+
+<p id="intro-description">I design and develop clean, responsive and professional websites for individuals, professionals and businesses.</p>
+
+<div class="buttons" id="intro-buttons"><a class="btn" href="#work">View My Work ↗</a><a class="btn light" href="#contact">Let's Talk</a></div>
+
+</div><div class="hero-bottom"><span>Based in Nepal</span><span>Web Development · Deployment · Hosting</span></div></section>
 
 <section id="work" class="section work-section"><div class="title"><span>01 · SELECTED WORK</span><h2>Websites I've <em>built.</em></h2><p>Real websites designed and developed by me.</p></div><div class="work-grid">
+
 <a class="project project-link" href="https://nitrabahadurkarki.com.np/" target="_blank" rel="noopener"><div class="project-number">01</div><small>BUSINESS WEBSITE</small><h3>Nitra Bahadur Karki <i>↗</i></h3><p>Tourism · Trekking · Nepal</p><span class="visit-project">Visit Website ↗</span></a>
+
 <a class="project project-link" href="https://bandanasapkota.com.np/" target="_blank" rel="noopener"><div class="project-number">02</div><small>PERSONAL WEBSITE</small><h3>Bandana Sapkota <i>↗</i></h3><p>Personal Profile · Portfolio</p><span class="visit-project">Visit Website ↗</span></a>
+
 <a class="project project-link" href="https://gaurav-sapkota.com.np/" target="_blank" rel="noopener"><div class="project-number">03</div><small>PORTFOLIO WEBSITE</small><h3>Gaurav Sapkota <i>↗</i></h3><p>Personal Brand · Portfolio</p><span class="visit-project">Visit Website ↗</span></a>
+
 </div></section>
 
 <section id="services" class="dark section"><div class="title"><span>02 · SERVICES</span><h2>What I <em>do.</em></h2><p>Everything you need to get a professional website online.</p></div><div class="service-grid">
+
 <article><b>01</b><h3>Website Development</h3><p>Modern, responsive and mobile-friendly websites built around your needs.</p></article>
+
 <article><b>02</b><h3>Domain & Deployment</h3><p>Domain connection, DNS configuration and reliable website deployment.</p></article>
+
 <article><b>03</b><h3>Hosting Management</h3><p>Help choosing, connecting and managing suitable hosting for your website.</p></article>
+
 <article><b>04</b><h3>SEO & Maintenance</h3><p>Basic SEO setup, updates, fixes and ongoing website support.</p></article>
+
 </div></section>
 
 <section class="section process-section"><div class="title"><span>03 · PROCESS</span><h2>From idea to <em>online.</em></h2></div><div class="process">
+
 <div><b>01</b><h3>Discuss</h3><p>We understand your goals and requirements.</p></div>
+
 <div><b>02</b><h3>Design</h3><p>I create a clean design suited to your brand.</p></div>
+
 <div><b>03</b><h3>Develop</h3><p>The website is built and optimized for devices.</p></div>
+
 <div><b>04</b><h3>Launch</h3><p>Your website goes live with domain and deployment support.</p></div>
+
 </div></section>
 
 <section id="about" class="about dark"><div class="about-content"><span>04 · ABOUT ME</span><h2>Building a better <em>web.</em></h2><p>I'm Gaurav Sapkota, an independent web developer from Nepal. I create clean, modern and responsive websites for individuals, professionals and businesses. I'm still learning and evolving every day, and every project gives me an opportunity to improve my skills, gain experience and discover better ways to build for the web. I focus on clean design, responsive layouts and a smooth user experience, while also working with domain setup, deployment, hosting and basic SEO to help bring a website from an idea to a real online presence. My goal is simple — keep learning, keep improving and build websites that I'm proud to put my name behind.</p><div class="skills"><span>HTML</span><span>CSS</span><span>JavaScript</span><span>GitHub</span><span>Responsive Design</span><span>SEO</span></div></div></section>
@@ -44,14 +72,25 @@
 const m=document.querySelector(".menu"),n=document.querySelector("nav"),w=document.querySelector(".whatsapp-float");
 m.onclick=()=>{let o=n.classList.toggle("open");m.textContent=o?"×":"☰"};
 document.querySelectorAll("nav a").forEach(a=>a.onclick=()=>{n.classList.remove("open");m.textContent="☰"});
+
 let scrollTimer;
 window.addEventListener("scroll",()=>{w.classList.remove("show");clearTimeout(scrollTimer);scrollTimer=setTimeout(()=>w.classList.add("show"),700)});
 setTimeout(()=>w.classList.add("show"),700);
 
-const normal="Modern websites",em="made for you.";
-const normalEl=document.getElementById("typing-normal"),emEl=document.getElementById("typing-em");
+const name=document.getElementById("intro-name"),tag=document.getElementById("intro-tag"),photo=document.getElementById("intro-photo");
+const normalEl=document.getElementById("typing-normal"),emEl=document.getElementById("typing-em"),desc=document.getElementById("intro-description"),buttons=document.getElementById("intro-buttons");
+
+[name,tag,photo,normalEl.parentElement,desc,buttons].forEach(el=>el.classList.add("hero-sequence"));
+
+function show(el,delay){setTimeout(()=>el.classList.add("visible"),delay)}
+show(name,200);
+show(tag,650);
+show(photo,1000);
+show(normalEl.parentElement,1350);
+
+const normal="You imagine it.",em="I build it.";
 let i=0,j=0;
-function typeNormal(){if(i<normal.length){normalEl.textContent+=normal[i++];setTimeout(typeNormal,80)}else setTimeout(typeEm,250)}
-function typeEm(){if(j<em.length){emEl.textContent+=em[j++];setTimeout(typeEm,80)}}
-setTimeout(typeNormal,600);
+function typeNormal(){if(i<normal.length){normalEl.textContent+=normal[i++];setTimeout(typeNormal,75)}else setTimeout(typeEm,300)}
+function typeEm(){if(j<em.length){emEl.textContent+=em[j++];setTimeout(typeEm,75)}else{show(desc,2600);show(buttons,3000)}}
+setTimeout(typeNormal,1650);
 </script></body></html>
