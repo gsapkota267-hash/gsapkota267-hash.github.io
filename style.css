@@ -13,3 +13,5 @@
 @media(prefers-reduced-motion:reduce){
   .hero-content>*{opacity:1;transform:none;animation:none}
 }
+.cursor{display:inline-block;margin-left:3px;animation:blink .7s infinite}
+@keyframes blink{50%{opacity:0}}
